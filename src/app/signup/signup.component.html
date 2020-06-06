@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">Sign Up 
+
+    <mat-icon  svgIcon="close" color="warn" (click)="onClose()" ></mat-icon>
+</mat-toolbar>
+
+
+
+<form [formGroup]="userForm" >
+    <mat-form-field>
+        <mat-label>Enter your First Name</mat-label>
+        <input matInput formControlName="firstName" [(ngModel)]="firstName" >
+        <mat-error *ngIf="userForm.get('firstName').invalid">Enter the First Name</mat-error>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+        <mat-label>Enter your Last Name</mat-label>
+        <input matInput formControlName="lastName" [(ngModel)]="lastName" >
+        <mat-error *ngIf="userForm.get('lastName').invalid">Enter the Last Name</mat-error>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+        <mat-label>Enter your Email address</mat-label>
+        <input matInput formControlName="email" [(ngModel)]="email" placeholder="abc@xyz.com">
+        <mat-error *ngIf="userForm.get('email').invalid">Enter the Email address</mat-error>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput type="password" formControlName="password" [(ngModel)]="password">
+        <mat-error *ngIf="userForm.get('password').invalid">Enter the password</mat-error>
+    </mat-form-field>
+    <br><br>
+    <button   [disabled]="!(userForm.get('firstName').valid) || !(userForm.get('lastName').valid) || !(userForm.get('email').valid) ||  !(userForm.get('password').valid)" mat-raised-button (click)= "enter()" color="primary">Enter</button>
+
+</form>

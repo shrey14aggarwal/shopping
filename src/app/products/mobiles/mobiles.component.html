@@ -1,0 +1,31 @@
+<p>
+    <mat-toolbar color="primary">
+        <h1>Welcome to Mobiles section</h1>
+        <mat-icon svgIcon="cart" matBadge="{{badge}}" matBadgeColor="accent" (click)="cart()" matBadgeOverlap="true"></mat-icon>
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <button  mat-fab color="accent" (click)="onProducts()">Products</button><br>
+
+    </mat-toolbar>
+
+</p>
+
+<mat-grid-list cols="3" rowHeight="3:1.5" [gutterSize]="'10px'">
+    <mat-grid-tile *ngFor="let prods of phone_name"  class="mobile"><h2> {{prods.name}}</h2>
+        <br><br> <br><br> <br><br>
+        <h3> Price per Unit : {{prods.price}}€</h3>
+        <button class="button1" mat-raised-button color="primary" (click)="openDialog(prods.name)">Description</button>
+        <button class="button2" mat-raised-button (click)="add(prods.name)" color="primary">Add to Bag</button>
+        
+        <mat-form-field class="dropdown">
+            <mat-label>Quantity</mat-label>
+            <mat-select  [(value)]="quant">
+                <mat-option *ngFor="let qty of quantity" [value]="qty">
+                    {{qty}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </mat-grid-tile>
+
+</mat-grid-list>
+<div>

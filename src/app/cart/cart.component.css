@@ -1,0 +1,22 @@
+table {
+    width: 80%;
+    margin-left: 120px;
+   
+  }
+
+  .button1{
+    margin-left: 900px;
+    position: relative;
+}
+
+.button2{
+  margin-left: 50px;
+  position: relative;
+}
+
+mat-icon{
+  cursor: pointer;
+}
+
+.material-icons.color_green { color: green; }
+.material-icons.color_red { color: red; }

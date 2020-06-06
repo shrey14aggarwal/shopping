@@ -1,0 +1,79 @@
+mat-toolbar{
+    font-size: 35px;
+   
+}
+
+h1{
+    margin-left: 400px;
+    text-shadow: 2px 0 black, 0 2px black, 2px 0 black, 0 2px black;
+    font-size: 35px;
+    
+}
+
+h2{
+    position: absolute;
+  left: 95px;
+  top: -15px;
+}
+
+h3{
+    margin-top: 180px;
+    margin-left: -120px;
+}
+
+mat-grid-tile{
+
+    background-color: bisque;
+    border: 2px solid black;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url('src\assets\tablets.jpg')
+}
+h1{
+    margin-left: 5%;
+}
+
+.button1{
+    
+    margin-top: -65px;
+    position: absolute;
+    margin-left: 140px;
+}
+
+.button2{
+    
+    margin-top: 0px;
+    position: absolute;
+    margin-left: 140px;
+
+}
+
+.button3{
+    margin-left: 100px;
+}
+
+matBadge{
+
+    background-color: blue;
+}
+
+mat-icon{
+    color: black;
+    cursor: pointer;
+    transform: scale(1.5);
+    margin-left: 800px;
+}
+
+
+.dropdown{
+    
+    margin-top: 75px;
+    position: absolute;
+    margin-left: 140px;
+    color:black;
+    width: 97px;;
+}
+mat-label{
+    color: black;
+    font-weight: 500;
+}

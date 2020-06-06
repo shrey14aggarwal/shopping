@@ -1,0 +1,31 @@
+<h1>
+<mat-toolbar color="primary"> Welcome to e-Shop </mat-toolbar>
+
+<form [formGroup]="userForm" >
+    <mat-card fxFlexAlign="stretch"> 
+        <mat-card-title class="mat-body-2"	>Login</mat-card-title>
+        <mat-card-content>
+            <br><br>
+            <mat-form-field>
+                <mat-label>Enter your Email address</mat-label>
+                <input matInput formControlName="email" [(ngModel)]="email" placeholder="abc@xyz.com">
+                <mat-error *ngIf="userForm.get('email').invalid">Enter the Email address</mat-error>
+            </mat-form-field>
+            <br><br>
+            <mat-form-field>
+                <mat-label>Enter your Password</mat-label>
+                <input matInput type="password" formControlName="password" [(ngModel)]="password">
+                <mat-error *ngIf="userForm.get('password').invalid">Enter the password</mat-error>
+            </mat-form-field>
+            <br><br>
+           
+            <h2>
+            <button [disabled]="!(userForm.get('email').valid) ||  !(userForm.get('password').valid)" mat-raised-button (click)= "login()" color="primary">LogIn</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button (click)="createAccount()" color="accent">Create Account</button><br>
+            </h2>
+           
+        </mat-card-content>
+    </mat-card>
+</form>
+</h1>
